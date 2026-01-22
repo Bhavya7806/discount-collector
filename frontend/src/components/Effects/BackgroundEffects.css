@@ -1,0 +1,72 @@
+.effects-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0; /* Changed from -1 to 0 to ensure it sits correctly in the stack */
+    pointer-events: none; /* Allows you to click text/buttons underneath */
+  }
+  
+  /* --- BRIGHTER NEON GRID --- */
+  .neon-grid {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    bottom: -50%;
+    left: -50%;
+    /* Increased opacity from 0.1 to 0.3 for visibility */
+    background-image: 
+      linear-gradient(rgba(99, 102, 241, 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99, 102, 241, 0.3) 1px, transparent 1px);
+    background-size: 60px 60px; /* Slightly larger grid squares */
+    transform: perspective(500px) rotateX(60deg);
+    animation: grid-move 20s linear infinite;
+    /* Mask fades the grid out at the top so it doesn't look like a hard line */
+    mask-image: linear-gradient(to bottom, transparent 5%, black 40%, black 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 5%, black 40%, black 100%);
+  }
+  
+  @keyframes grid-move {
+    0% { transform: perspective(500px) rotateX(60deg) translateY(0); }
+    100% { transform: perspective(500px) rotateX(60deg) translateY(60px); }
+  }
+  
+  /* --- VISIBLE PARTICLES --- */
+  .particles-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .particle {
+    position: absolute;
+    bottom: -10px; /* Start slightly below screen */
+    width: 6px;    /* Visible size */
+    height: 6px;
+    background: var(--accent-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent-primary), 0 0 20px var(--accent-secondary); /* Double Glow */
+    opacity: 0;
+    animation: floatUp ease-in-out infinite;
+  }
+  
+  @keyframes floatUp {
+    0% { transform: translateY(0) scale(0.5); opacity: 0; }
+    20% { opacity: 0.8; }
+    80% { opacity: 0.8; }
+    100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+  }
+  
+  /* --- VIGNETTE OVERLAY --- */
+  /* This adds a subtle glow in the middle to make the "plain" background look deep */
+  .hero-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }

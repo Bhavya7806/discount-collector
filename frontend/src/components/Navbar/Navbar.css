@@ -1,0 +1,170 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+  }
+  
+  /* Ensure the Link behaves like a flex container */
+  .navbar-logo-link {
+    text-decoration: none;
+    display: flex;       /* Forces Logo + Text to be in a row */
+    align-items: center; /* Centers them vertically */
+    gap: 15px;           /* Space between Image and Text */
+  }
+  
+  .logo-img {
+    height: 45px;        /* Fixed height for consistency */
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px var(--accent-primary));
+  }
+  
+  .navbar-logo {
+    /* This container is redundant if using Link, but good for safety */
+    display: flex;
+    align-items: center;
+  }
+  
+  .glow-text {
+    color: var(--accent-primary);
+    text-shadow: 0 0 10px rgba(99, 102, 241, 0.6);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 0;
+    white-space: nowrap; /* Prevents text from breaking into two lines */
+  }
+  
+  /* ... Keep the rest of your button/link styles ... */
+  .navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+  
+  .navbar-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: var(--text-primary);
+    text-shadow: 0 0 8px var(--accent-secondary);
+  }
+  
+  .navbar-auth {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  button {
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-login {
+    background: transparent;
+    border: 1px solid var(--accent-primary);
+    color: var(--accent-primary);
+  }
+  
+  .btn-login:hover {
+    background: var(--accent-primary);
+    color: white;
+    box-shadow: 0 0 15px var(--accent-primary);
+  }
+  
+  .btn-signup {
+    background: var(--accent-secondary);
+    border: none;
+    color: white;
+  }
+  
+  .btn-signup:hover {
+    background: #7c3aed;
+    box-shadow: 0 0 15px var(--accent-secondary);
+  }
+  /* Logged In Styles */
+/* ... Keep your existing Navbar styles ... */
+
+/* --- LOGGED IN PROFILE SECTION --- */
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .profile-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* SPACE BETWEEN ICON AND LOGOUT BUTTON */
+  }
+  
+  .profile-icon {
+    color: var(--accent-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 2px var(--accent-primary));
+  }
+  
+  .profile-icon:hover {
+    color: white;
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 8px var(--accent-primary));
+  }
+  
+  .btn-submit-deal {
+    background: linear-gradient(135deg, var(--accent-secondary), #d946ef);
+    border: none;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+  }
+  
+  .btn-submit-deal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.6);
+  }
+  
+  .btn-logout {
+    background: transparent;
+    border: 1px solid var(--error); /* Red border */
+    color: var(--error);
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-logout:hover {
+    background: var(--error);
+    color: white;
+    box-shadow: 0 0 10px var(--error);
+  }
+  .nav-back-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent-primary) !important; /* Make it pop */
+    font-weight: bold;
+  }

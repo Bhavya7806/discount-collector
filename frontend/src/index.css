@@ -1,0 +1,60 @@
+/* GLOBAL THEME VARIABLES */
+:root {
+  /* Base Colors */
+  --bg-primary: #0a0a0f;    /* Midnight Noir */
+  --bg-secondary: #121218;  /* Deep Space */
+  --bg-card: #1e1e28;       /* Charcoal Steel */
+  --bg-interactive: #2a2a35; /* Dark Slate */
+
+  /* Accent Colors */
+  --accent-primary: #6366f1;   /* Neon Electric Blue */
+  --accent-secondary: #8b5cf6; /* Cyber Violet */
+  --success: #10b981;          /* Glowing Emerald */
+  --warning: #f59e0b;          /* Golden Amber */
+  --error: #ef4444;            /* Crimson Red */
+  --info: #60a5fa;             /* Ice Blue */
+
+  /* Text Colors */
+  --text-primary: #f8fafc;     /* Pure White */
+  --text-secondary: #cbd5e1;   /* Moonlight Gray */
+  --text-tertiary: #94a3b8;    /* Dust Gray */
+  --text-disabled: #64748b;    /* Ash Gray */
+  
+  /* Effects */
+  --glass-bg: rgba(30, 30, 40, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --neon-glow: 0 0 10px rgba(99, 102, 241, 0.5); 
+  --transition-speed: 0.3s ease;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif; /* Clean modern font */
+  overflow-x: hidden; /* Prevents horizontal scroll from animations */
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-interactive);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}

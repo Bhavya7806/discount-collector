@@ -1,0 +1,103 @@
+.hero-section {
+    height: 90vh; /* Takes up most of the screen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    /* CRITICAL: Allows absolute children (effects) to be positioned inside */
+    position: relative; 
+    overflow: hidden;
+    
+    /* Ensure no background color here overrides the effects */
+    background: transparent; 
+    padding-top: 60px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5rem;
+    background: linear-gradient(to right, var(--text-primary), var(--accent-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+  }
+  
+  /* Search Container */
+  .search-container {
+    display: flex;
+    background: var(--bg-card);
+    padding: 0.5rem;
+    border-radius: 50px;
+    border: 1px solid var(--glass-border);
+    width: 60%;
+    margin: 0 auto 3rem auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  }
+  
+  .input-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 1.5rem;
+  }
+  
+  .input-wrapper input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    outline: none;
+  }
+  
+  .search-btn {
+    background: var(--accent-primary);
+    color: white;
+    border: none;
+    border-radius: 40px;
+    padding: 0.8rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.2s;
+  }
+  
+  .search-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--accent-primary);
+  }
+  
+  /* Categories */
+  .categories {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .cat-item {
+    color: var(--text-tertiary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  
+  .cat-item:hover {
+    background: var(--bg-interactive);
+    color: var(--accent-secondary);
+    border-color: var(--accent-secondary);
+    transform: translateY(-5px);
+  }
