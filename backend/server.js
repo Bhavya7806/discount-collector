@@ -11,7 +11,9 @@ const PORT = process.env.PORT || 8080;
 
 // --- MIDDLEWARE ---
 // Allow requests from your React Frontend (running on port 3000)
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ 
+  origin: ['http://localhost:3000', 'https://discount-collector.onrender.com'] 
+}));
 app.use(express.json()); // Parse incoming JSON payloads
 
 // --- ROUTES ---
